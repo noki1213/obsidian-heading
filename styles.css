@@ -1,0 +1,105 @@
+/* ===== Reading Mode ===== */
+
+.markdown-preview-view {
+	counter-reset: h1 h2 h3 h4 h5 h6;
+}
+
+.markdown-preview-view h1 {
+	counter-increment: h1;
+	counter-reset: h2 h3 h4 h5 h6;
+}
+.markdown-preview-view h1::before {
+	content: counter(h1) ". ";
+}
+
+.markdown-preview-view h2 {
+	counter-increment: h2;
+	counter-reset: h3 h4 h5 h6;
+}
+.markdown-preview-view h2::before {
+	content: counter(h1) "." counter(h2) " ";
+}
+
+.markdown-preview-view h3 {
+	counter-increment: h3;
+	counter-reset: h4 h5 h6;
+}
+.markdown-preview-view h3::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+
+.markdown-preview-view h4 {
+	counter-increment: h4;
+	counter-reset: h5 h6;
+}
+.markdown-preview-view h4::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
+.markdown-preview-view h5 {
+	counter-increment: h5;
+	counter-reset: h6;
+}
+.markdown-preview-view h5::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+}
+
+.markdown-preview-view h6 {
+	counter-increment: h6;
+}
+.markdown-preview-view h6::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+}
+
+/* ===== Live View (Live Preview) ===== */
+
+.cm-editor .cm-content {
+	counter-reset: h1 h2 h3 h4 h5 h6;
+}
+
+.cm-editor .cm-content .cm-line.HyperMD-header-1 {
+	counter-increment: h1;
+	counter-reset: h2 h3 h4 h5 h6;
+}
+.cm-editor .cm-content .cm-line.HyperMD-header-1 .cm-formatting-header::before {
+	content: counter(h1) ". ";
+}
+
+.cm-editor .cm-content .cm-line.HyperMD-header-2 {
+	counter-increment: h2;
+	counter-reset: h3 h4 h5 h6;
+}
+.cm-editor .cm-content .cm-line.HyperMD-header-2 .cm-formatting-header::before {
+	content: counter(h1) "." counter(h2) " ";
+}
+
+.cm-editor .cm-content .cm-line.HyperMD-header-3 {
+	counter-increment: h3;
+	counter-reset: h4 h5 h6;
+}
+.cm-editor .cm-content .cm-line.HyperMD-header-3 .cm-formatting-header::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+
+.cm-editor .cm-content .cm-line.HyperMD-header-4 {
+	counter-increment: h4;
+	counter-reset: h5 h6;
+}
+.cm-editor .cm-content .cm-line.HyperMD-header-4 .cm-formatting-header::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
+.cm-editor .cm-content .cm-line.HyperMD-header-5 {
+	counter-increment: h5;
+	counter-reset: h6;
+}
+.cm-editor .cm-content .cm-line.HyperMD-header-5 .cm-formatting-header::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+}
+
+.cm-editor .cm-content .cm-line.HyperMD-header-6 {
+	counter-increment: h6;
+}
+.cm-editor .cm-content .cm-line.HyperMD-header-6 .cm-formatting-header::before {
+	content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+}
