@@ -1,3 +1,19 @@
+/* 番号と見出しテキストの間隔 */
+.markdown-preview-view h1::before,
+.markdown-preview-view h2::before,
+.markdown-preview-view h3::before,
+.markdown-preview-view h4::before,
+.markdown-preview-view h5::before,
+.markdown-preview-view h6::before,
+.cm-editor .cm-content .cm-line.HyperMD-header-1::before,
+.cm-editor .cm-content .cm-line.HyperMD-header-2::before,
+.cm-editor .cm-content .cm-line.HyperMD-header-3::before,
+.cm-editor .cm-content .cm-line.HyperMD-header-4::before,
+.cm-editor .cm-content .cm-line.HyperMD-header-5::before,
+.cm-editor .cm-content .cm-line.HyperMD-header-6::before {
+	margin-right: 0.5em;
+}
+
 /* ===== Reading Mode ===== */
 
 .markdown-preview-view {
