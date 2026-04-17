@@ -25,7 +25,7 @@
 	counter-reset: heading-h2 heading-h3 heading-h4 heading-h5 heading-h6;
 }
 .markdown-preview-view h1::before {
-	content: counter(heading-h1) ". ";
+	content: counter(heading-h1) " ";
 }
 
 .markdown-preview-view h2 {
@@ -80,7 +80,7 @@
 	counter-reset: heading-h2 heading-h3 heading-h4 heading-h5 heading-h6;
 }
 .cm-editor .cm-content .cm-line.HyperMD-header-1::before {
-	content: counter(heading-h1) ". ";
+	content: counter(heading-h1) " ";
 }
 
 .cm-editor .cm-content .cm-line.HyperMD-header-2 {
