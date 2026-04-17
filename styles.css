@@ -68,12 +68,6 @@
 }
 
 /* ===== Live View (Live Preview) ===== */
-
-/* カーソルが来ても # 記号を非表示にする */
-.cm-editor .cm-formatting-header {
-	display: none;
-}
-
 /* .cm-formatting-header（#記号の要素）はカーソルがない行で非表示になるため、
    .cm-line 自体の ::before を使い常時表示にする */
 
