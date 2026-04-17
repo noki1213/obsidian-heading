@@ -68,12 +68,6 @@
 }
 
 /* ===== Live View (Live Preview) ===== */
-
-/* keep the # marks hidden even when the cursor moves onto the line */
-.cm-editor .cm-formatting-header {
-	display: none;
-}
-
 /* Since .cm-formatting-header (the element for the # marks) is hidden on lines without the cursor,
    use ::before on .cm-line itself to keep it always visible */
 
