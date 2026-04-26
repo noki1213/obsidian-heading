@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-heading",
 	"name": "Heading Numbers",
-	"version": "1.0.0",
+	"version": "1.0.5",
 	"minAppVersion": "1.0.0",
 	"description": "LaTeX-style heading numbers and current section breadcrumb in the status bar",
 	"author": "noki",
