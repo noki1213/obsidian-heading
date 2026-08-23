@@ -24,7 +24,7 @@ export default class HeadingNumbersPlugin extends Plugin {
 		this.registerDomEvent(document, 'keyup', () => this.updateStatusBar());
 	}
 
-	// Build the heading hierarchy up to the cursor position
+	// Build the heading hierarchy leading up to the cursor position
 	private buildBreadcrumb(lines: string[], upToLine: number): HeadingInfo[] {
 		const counters = [0, 0, 0, 0, 0, 0];
 		const stack: HeadingInfo[] = [];
@@ -36,14 +36,14 @@ export default class HeadingNumbersPlugin extends Plugin {
 			const level = match[1].length;
 			const text = match[2].trim();
 
-			// Increment the counter for this level and reset any deeper levels
+			// Bump the counter for this level and reset the deeper ones
 			counters[level - 1]++;
 			for (let j = level; j < 6; j++) counters[j] = 0;
 
-			// Build the number string (e.g. "1.2" for an h2)
+			// Assemble the number string (e.g. "1.2" for an h2)
 			const number = counters.slice(0, level).join('.');
 
-			// Remove entries at the same or deeper level from the stack, then push the new one
+			// Pop levels at or below this one off the stack, then push
 			while (stack.length > 0 && stack[stack.length - 1].level >= level) {
 				stack.pop();
 			}
