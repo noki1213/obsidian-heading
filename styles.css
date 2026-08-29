@@ -69,7 +69,7 @@
 
 /* ===== Live View (Live Preview) ===== */
 /* Since .cm-formatting-header (the element for the # marks) is hidden on lines without the cursor,
-   use ::before on .cm-line itself to keep it always visible */
+   the number is drawn with ::before on .cm-line itself so it always shows */
 
 .cm-editor .cm-content {
 	counter-reset: heading-h1 heading-h2 heading-h3 heading-h4 heading-h5 heading-h6;
